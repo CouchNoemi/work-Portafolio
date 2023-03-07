@@ -5,26 +5,27 @@
     box-sizing: border-box ;
 }
 
-img{ display:block; 
+.flex-section {
+  display: flex;
+  justify-content: center;
 }
-/* end reset */
 
-/* Utility classes */
-.nowrap{
-    white-space: nowrap;
+section h2 {
+  flex-basis: 20%;
 }
-.offscreen{
-    position: absolute;
-    left: -10000px;
+
+.about-me-p, .card-container {
+  flex-basis: 70%;
+  display: flex;
+  flex-wrap: wrap;
 }
-/* End utility classes */
 
 body {
     background-color:rgb(226, 159, 192);
     position: relative;
 }
 .header {
-    padding: 20px;
+    padding: 60px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-color: rgb(255, 159, 207);
     color: black;
@@ -42,7 +43,6 @@ body {
     background-repeat: repeat;
     background: size 1px;
     background-position: center;
-    width:fit-content;
 }
 .header h1{
     display: inline-block;
@@ -118,11 +118,11 @@ li a:focus {
 .about, .contact{
     margin-top: 0;
 }
-@media(max-width:1280px){
+/* @media(max-width:1280px){
     .container{
         width: 100%;
     }
-}
+} */
 a {
     color:rgb(26, 19, 19);
     text-decoration:underline;
@@ -139,16 +139,15 @@ footer ul {
     text-align:center;
 }
 .card {
-    border-style: solid;
-    border-width: 1px;
-    padding: 10px;
+    /* border-style: solid;
+    border-width: 1px; */
     flex-basis: calc(50% - 1rem);
-    margin: 1rem;
+    margin: .5rem;
   }
   .first-card{
     min-height: 400px;
     flex-basis: 100%;
-    margin: 1rem;
+    margin: .5rem;
   }
 
   .card-img {
@@ -156,9 +155,9 @@ footer ul {
     height: 100%;
   }
   
-  .card header {
+  /* .card header {
     padding: 20px;
-  }
+  } */
   
   .card p {
     text-align: center;
@@ -166,22 +165,11 @@ footer ul {
 
   new */
 
-   section {
-    display: flex;
-    justify-content: center;
-  }
 
-  section h2 {
-    flex-basis: 20%
-  }
 
-  .about-me-p, .card-container {
-    flex-basis: 70%;
-  }
-
-  @media screen and (max-width: 955px) {
+  @media screen and (max-width: 900px) {
     .card {
-      width: 80%;
+      width: 100%;
     }
     header {
       background: #3c9f65;
